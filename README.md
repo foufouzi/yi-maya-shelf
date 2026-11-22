@@ -4,14 +4,14 @@ A collection of standalone tools for animation and rigging workflows in **Autode
 
 Each script is designed to be run independently. Importing a tool does not execute its main action; run its documented entry point or execute the file as a script.
 
-## 💚Requirements
+## Requirements
 
 - Autodesk Maya 2025
 - Python 3 included with Maya
 - PySide6 for tools that provide a PySide6 interface (included with Maya 2025)
 - animBot installed to use the animBot shelf launcher (`000-animbot_shelf_button.py`)
 
-## 💚Repository layout
+## Repository layout
 
 Tool scripts are stored in the repository root and use numbered filenames:
 
@@ -23,11 +23,11 @@ ignore/                # Superseded revisions kept for reference
 
 When multiple revisions exist, the highest revision number is the current version. For example, `009.6-locator_checker.py` is the current revision of tool 009; earlier revisions are archived in `ignore/`.
 
-## 💚Installation and use
+## Installation and use
 
 The numbered, hyphenated filenames are not directly importable as regular Python module names. You can run a script in place, or copy and rename it before importing.
 
-### 📗Run a script in place
+### Run a script in place
 
 In Maya's Python Script Editor or a Python shelf button, use `runpy` and the full path to the script. Replace the example path with the location of your local checkout:
 
@@ -38,7 +38,7 @@ runpy.run_path(r"C:/path/to/yi-maya-shelf/012-merge_to_world.py", run_name="__ma
 
 This runs the script's `__main__` block, which typically opens its UI or runs its default action.
 
-### 📗Import a renamed script
+### Import a renamed script
 
 Copy a script into your Maya scripts directory and remove the numeric prefix and hyphen from its filename. For example, rename `012-merge_to_world.py` to `merge_to_world.py`.
 
@@ -57,15 +57,15 @@ mtw.show_merge_to_world_ui()
 
 Importing the module also lets you call its non-UI functions. Refer to the tool catalog below for available entry points.
 
-### 📗Add a shelf button
+### Add a shelf button
 
 The run-in-place snippet above can be used in a Python-type Maya shelf button. Maya saves shelf changes when you quit cleanly or use **Shelf Editor → Save All Shelves**.
 
-## 💚Tool catalog
+## Tool catalog
 
 | ID | Script | Entry point(s) | Description |
 | --- | --- | --- | --- |
-| 000 | `000-animbot_shelf_button.py` | `create_animbot_shelf_button()` | Adds an animBot launcher to the active shelf. Re-running the function reuses an existing button rather than creating duplicates. Requires animBot. |
+| 000 | [`000-animbot_shelf_button.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/000-animbot_shelf_button.py) | `create_animbot_shelf_button()` | Adds an animBot launcher to the active shelf. Re-running the function reuses an existing button rather than creating duplicates. Requires animBot. |
 | 001 | `001.1-icon_generator.py` | `show()` | Creates 64 × 64 PNG shelf icons with text, customizable colours, font size, margins, and a live preview. Can save icons directly to Maya's user icons folder. |
 | 002 | `002-add_camera_gate.py` | — | See [Known issues](#known-issues). |
 | 003 | `003.2-curve_top_always.py` | `show()` / `set_always_on_top()` | Keeps selected control curves visible over geometry in Viewport 2.0. Supports automatic or manual override colours and restores the prior override colour after enabling the draw-on-top setting. |
