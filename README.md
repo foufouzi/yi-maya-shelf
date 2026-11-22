@@ -21,7 +21,7 @@ NNN.R-tool_name.py     # Revision R of tool NNN
 ignore/                # Superseded revisions kept for reference
 ```
 
-When multiple revisions exist, the highest revision number is the current version. For example, `009.6-locator_checker.py` is the current revision of tool 009; earlier revisions are archived in `ignore/`.
+When multiple revisions exist, the highest revision number is the current version. For example, `009.6_locator_checker.py` is the current revision of tool 009; earlier revisions are archived in `ignore/`.
 
 ## Installation and use
 
@@ -65,19 +65,19 @@ The run-in-place snippet above can be used in a Python-type Maya shelf button. M
 
 | ID | Script | Entry point(s) | Description |
 | --- | --- | --- | --- |
-| 000 | [`000-animbot_shelf_button.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/000-animbot_shelf_button.py) | `create_animbot_shelf_button()` | Adds an animBot launcher to the active shelf. Re-running the function reuses an existing button rather than creating duplicates. Requires animBot. |
-| 001 | `001.1-icon_generator.py` | `show()` | Creates 64 × 64 PNG shelf icons with text, customizable colours, font size, margins, and a live preview. Can save icons directly to Maya's user icons folder. |
-| 002 | `002-add_camera_gate.py` | — | See [Known issues](#known-issues). |
-| 003 | `003.2-curve_top_always.py` | `show()` / `set_always_on_top()` | Keeps selected control curves visible over geometry in Viewport 2.0. Supports automatic or manual override colours and restores the prior override colour after enabling the draw-on-top setting. |
-| 004 | `004-anti_clipping_cluster.py` | `toggle_anti_clipping_cluster()` | Creates a hidden cluster that scales selected body vertices inward to reduce visible clothing intersections. Run again to remove the cluster. This is a visual adjustment, not a skinning fix. |
-| 005 | `005-clean_unknown_nodes.py` | `report_unknown()` / `clean_unknown()` / `optimize_scene()` | Inspects and removes unknown nodes and unknown plug-in requirements that can prevent saving Maya ASCII (`.ma`) files. `report_unknown()` is inspection-only. |
-| 006 | `006-copy_animation_key_to_json.py` | `show_anim_key_transfer_ui()` | Exports Graph Editor-selected keys to JSON and imports them into another scene. Preserves frame numbers, strips namespaces when matching, and performs the import as one undo step. Can clear existing keys in imported ranges or limit the operation to selected nodes. |
-| 007 | `007-custom_axis_orient.py` | `show_custom_axis_ui()` / `orient_from()` / `reset_orient()` | Aligns the Move manipulator, and optionally Rotate and Scale, to the world rotation of the last-selected object using Custom axis orientation. |
-| 008 | `008-bake_to_selected.py` | `bake_to_selected()` | Bakes source object A's world-space animation onto target B over the playback range using a temporary parent constraint. Locked target channels are skipped with a warning. |
-| 009 | `009.6-locator_checker.py` | `show_locator_checker_ui()` / `fix_locator_visibility()` | Diagnoses and fixes locators or other transforms that are not visible in the viewport. Checks visibility, local scale, drawing overrides, template state, parent chains, display layers, isolate select, and the viewport's Locators display setting. Also adjusts locator size and colour. |
-| 010 | `010-bake_locators_to_temp.py` | `show()` | Bakes selected locators' world-space transforms—including animation inherited through constrained parent groups—onto new `temp_locator` nodes over a chosen frame range. |
-| 011 | `011-camera_sequencer_builder.py` | `show_camera_sequencer_builder_ui()` | Builds Camera Sequencer shots from selected cameras using each camera's keyed range, with playback range as a fallback. Checks and fixes non-unit camera scale and can create an ubercam. Headless functions: `check_camera_scale()`, `fix_camera_scale()`, and `build_shots_from_cameras()`. |
-| 012 | `012-merge_to_world.py` | `show_merge_to_world_ui()` / `merge_to_world()` | Bakes an object's animation together with animated parent-group motion onto a new world-parented node. Supports cameras, locators, joints, meshes, curves, and groups; also bakes animated shape attributes such as focal length. Can optionally delete the source group. |
+| 000 | [`000_animbot_shelf_button.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/000_animbot_shelf_button.py) | `create_animbot_shelf_button()` | Adds an animBot launcher to the active shelf. Re-running the function reuses an existing button rather than creating duplicates. Requires animBot. |
+| 001 | [`001.1_icon_generator.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/001.1_icon_generator.py) | `show()` | Creates 64 × 64 PNG shelf icons with text, customizable colours, font size, margins, and a live preview. Can save icons directly to Maya's user icons folder. |
+| 002 | [`002_add_camera_gate.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/002_add_camera_gate.py) | — | See [Known issues](#known-issues). |
+| 003 | [`003.2_curve_top_always.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/003.2_curve_top_always.py) | `show()` / `set_always_on_top()` | Keeps selected control curves visible over geometry in Viewport 2.0. Supports automatic or manual override colours and restores the prior override colour after enabling the draw-on-top setting. |
+| 004 | [`004_anti_clipping_cluster.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/004_anti_clipping_cluster.py) | `toggle_anti_clipping_cluster()` | Creates a hidden cluster that scales selected body vertices inward to reduce visible clothing intersections. Run again to remove the cluster. This is a visual adjustment, not a skinning fix. |
+| 005 | [`005_clean_unknown_nodes.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/005_clean_unknown_nodes.py) | `report_unknown()` / `clean_unknown()` / `optimize_scene()` | Inspects and removes unknown nodes and unknown plug-in requirements that can prevent saving Maya ASCII (`.ma`) files. `report_unknown()` is inspection-only. |
+| 006 | [`006_copy_animation_key_to_json.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/006_copy_animation_key_to_json.py) | `show_anim_key_transfer_ui()` | Exports Graph Editor-selected keys to JSON and imports them into another scene. Preserves frame numbers, strips namespaces when matching, and performs the import as one undo step. Can clear existing keys in imported ranges or limit the operation to selected nodes. |
+| 007 | [`007_custom_axis_orient.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/007_custom_axis_orient.py) | `show_custom_axis_ui()` / `orient_from()` / `reset_orient()` | Aligns the Move manipulator, and optionally Rotate and Scale, to the world rotation of the last-selected object using Custom axis orientation. |
+| 008 | [`008_bake_to_selected.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/008_bake_to_selected.py) | `bake_to_selected()` | Bakes source object A's world-space animation onto target B over the playback range using a temporary parent constraint. Locked target channels are skipped with a warning. |
+| 009 | [`009.6_locator_checker.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/009.6_locator_checker.py) | `show_locator_checker_ui()` / `fix_locator_visibility()` | Diagnoses and fixes locators or other transforms that are not visible in the viewport. Checks visibility, local scale, drawing overrides, template state, parent chains, display layers, isolate select, and the viewport's Locators display setting. Also adjusts locator size and colour. |
+| 010 | [`010_bake_locators_to_temp.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/010_bake_locators_to_temp.py) | `show()` | Bakes selected locators' world-space transforms—including animation inherited through constrained parent groups—onto new `temp_locator` nodes over a chosen frame range. |
+| 011 | [`011_camera_sequencer_builder.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/011_camera_sequencer_builder.py) | `show_camera_sequencer_builder_ui()` | Builds Camera Sequencer shots from selected cameras using each camera's keyed range, with playback range as a fallback. Checks and fixes non-unit camera scale and can create an ubercam. Headless functions: `check_camera_scale()`, `fix_camera_scale()`, and `build_shots_from_cameras()`. |
+| 012 | [`012_merge_to_world.py`](https://github.com/foufouzi/yi-maya-shelf/blob/main/012_merge_to_world.py) | `show_merge_to_world_ui()` / `merge_to_world()` | Bakes an object's animation together with animated parent-group motion onto a new world-parented node. Supports cameras, locators, joints, meshes, curves, and groups; also bakes animated shape attributes such as focal length. Can optionally delete the source group. |
 
 ## Important notes
 
@@ -90,7 +90,7 @@ The run-in-place snippet above can be used in a Python-type Maya shelf button. M
 
 ## Known issues
 
-`002-add_camera_gate.py` currently contains an older copy of the Locator Checker rather than a camera-gate tool. Use `009.6-locator_checker.py` for locator visibility work until script 002 is replaced.
+`002_add_camera_gate.py` currently contains an older copy of the Locator Checker rather than a camera-gate tool. Use `009.6_locator_checker.py` for locator visibility work until script 002 is replaced.
 
 ## License
 
