@@ -4,7 +4,7 @@ A collection of standalone tools for animation and rigging workflows in **Autode
 
 Each script is designed to be run independently. Importing a tool does not execute its main action; run its documented entry point or execute the file as a script.
 
-## Requirements
+## 💚Requirements
 
 - Autodesk Maya 2025
 - Python 3 included with Maya
@@ -27,7 +27,7 @@ When multiple revisions exist, the highest revision number is the current versio
 
 The numbered, hyphenated filenames are not directly importable as regular Python module names. You can run a script in place, or copy and rename it before importing.
 
-### Run a script in place
+### 📗Run a script in place
 
 In Maya's Python Script Editor or a Python shelf button, use `runpy` and the full path to the script. Replace the example path with the location of your local checkout:
 
@@ -38,7 +38,7 @@ runpy.run_path(r"C:/path/to/yi-maya-shelf/012-merge_to_world.py", run_name="__ma
 
 This runs the script's `__main__` block, which typically opens its UI or runs its default action.
 
-### Import a renamed script
+### 📗Import a renamed script
 
 Copy a script into your Maya scripts directory and remove the numeric prefix and hyphen from its filename. For example, rename `012-merge_to_world.py` to `merge_to_world.py`.
 
@@ -57,7 +57,7 @@ mtw.show_merge_to_world_ui()
 
 Importing the module also lets you call its non-UI functions. Refer to the tool catalog below for available entry points.
 
-### Add a shelf button
+### 📗Add a shelf button
 
 The run-in-place snippet above can be used in a Python-type Maya shelf button. Maya saves shelf changes when you quit cleanly or use **Shelf Editor → Save All Shelves**.
 
