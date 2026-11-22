@@ -11,7 +11,7 @@ Each script is designed to be run independently. Importing a tool does not execu
 - PySide6 for tools that provide a PySide6 interface (included with Maya 2025)
 - animBot installed to use the animBot shelf launcher (`000-animbot_shelf_button.py`)
 
-## Repository layout
+## 💚Repository layout
 
 Tool scripts are stored in the repository root and use numbered filenames:
 
@@ -23,7 +23,7 @@ ignore/                # Superseded revisions kept for reference
 
 When multiple revisions exist, the highest revision number is the current version. For example, `009.6-locator_checker.py` is the current revision of tool 009; earlier revisions are archived in `ignore/`.
 
-## Installation and use
+## 💚Installation and use
 
 The numbered, hyphenated filenames are not directly importable as regular Python module names. You can run a script in place, or copy and rename it before importing.
 
@@ -61,7 +61,7 @@ Importing the module also lets you call its non-UI functions. Refer to the tool 
 
 The run-in-place snippet above can be used in a Python-type Maya shelf button. Maya saves shelf changes when you quit cleanly or use **Shelf Editor → Save All Shelves**.
 
-## Tool catalog
+## 💚Tool catalog
 
 | ID | Script | Entry point(s) | Description |
 | --- | --- | --- | --- |
